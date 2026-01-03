@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dice Game</title>
+  <link rel="stylesheet" href="styles1.css" />
+  <link rel="stylesheet" href="styles2.css" />
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet" />
+</head>
+<body>
+
+
+  <div id="nameScreen" class="name-screen">
+    <div class="name-card">
+      <h1 class="title">Dice Game</h1>
+
+      <input id="name1" class="nameInput" placeholder="Player Name" />
+      <input id="name2" class="nameInput" placeholder="Player Name" />
+
+      <button id="startBtn" class="styledBtn">Start Game</button>
+    </div>
+  </div>
+
+
+  <div id="gameContainer" class="container hidden" aria-hidden="true">
+    <h1 id="mainTitle">Let's Play!</h1>
+
+    <div class="board">
+      <div class="player-col">
+        <p class="playerLabel" id="label1">Player 1 : 0</p>
+        <img id="img1" class="diceImage" src="images/dice6.png" alt="dice 1" />
+        <button id="roll1" class="rollBtn">Roll</button>
+      </div>
+
+      <div class="player-col">
+        <p class="playerLabel" id="label2">Player 2 : 0</p>
+        <img id="img2" class="diceImage" src="images/dice6.png" alt="dice 2" />
+        <button id="roll2" class="rollBtn">Roll</button>
+      </div>
+    </div>
+
+    <div id="status" class="status">Waiting to start...</div>
+
+    <div class="controls">
+      <button id="restart" class="smallBtn">Refresh</button>
+    </div>
+  </div>
+
+
+  <div id="winnerOverlay" class="overlay hidden"></div>
+  <div id="winnerBox" class="winnerBox hidden" role="dialog" aria-modal="true">
+    <p id="winnerText"></p>
+    <button id="closePopup" class="styledBtn">Play Again</button>
+  </div>
+
+  <audio id="winSound" src="winner.mp3"></audio>
+   <audio id="diceSound" src="dice.mp3"></audio>
+
+  <script src="index.js"></script>
+</body>
+</html>
